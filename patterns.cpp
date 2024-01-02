@@ -19,15 +19,34 @@ void pattern1(int n)
 // Space Complexity:
 // The space complexity is O(1) or constant. This is because the amount of additional memory used by the program does not depend on the input size "n." The only variables used are i and j, which are of constant size, and they do not increase with the input size. The cout << "* "; statement prints a fixed string, and the space used by it is also constant. Therefore, the space complexity is O(1).
 }
+
+void pattern2( int n)
+{
+    int i,j;
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<=i;j++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+
+    // Time complexity : o(n^2)
+    // Space complexity : o(1)
+}
 int main()
 {
     int t;
+    cout << "no of test cases";
     cin >> t;
     while(t>0)
     {
         int n;
+        cout << "no of rows";
         cin >> n;
         pattern1(n);
+        pattern2(n);
         t--;
     }
     return 0;
